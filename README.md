@@ -93,26 +93,22 @@ para um sub-recurso existente; atualiza o recurso principal com uma referência 
 * O método DELETE deve ser usado excluir um recurso existente
 * O método PATCH deve ser utilizado para atualizar parcialmente um recurso 
 
-Exemplos:
-`GET /pedidos Retorna a lista de pedidos`
-
-`GET /pedidos/10 Retorna um pedido específico`
-
-`POST /pedidos Cria um novo pedido`
-
-`PUT /pedidos/10 Atualiza o pedido #10`
-
-`PATCH /pedidos/10 Atualiza parcialmente o pedido #10`
-
-`DELETE /pedidos/10 Apaga o pedido #10`
+Exemplos: 
+`GET /pedidos Retorna a lista de pedidos`  
+`GET /pedidos/10 Retorna um pedido específico`  
+`POST /pedidos Cria um novo pedido`  
+`PUT /pedidos/10 Atualiza o pedido #10`  
+`PATCH /pedidos/10 Atualiza parcialmente o pedido #10`  
+`DELETE /pedidos/10 Apaga o pedido #10`  
 
 Exemplos com relacionamento:
-`GET /pedidos/10/itens Retorna a lista de itens do pedido #10`
-`GET /pedidos/10/itens/5 Retorna o item #5 do pedido #10`
-`POST /pedidos/10/itens Cria uma novo item no pedido #10`
-`PUT /pedidos/10/itens/5 Atualiza o item #5 do pedido #10`
-`PATCH /pedidos/10/itens/5 Atualiza parcialmente o item #5 do pedido #10`
-`DELETE /pedidos/10/itens/5 Apaga o item #5 do pedido #10`
+
+`GET /pedidos/10/itens Retorna a lista de itens do pedido #10`  
+`GET /pedidos/10/itens/5 Retorna o item #5 do pedido #10`  
+`POST /pedidos/10/itens Cria uma novo item no pedido #10`  
+`PUT /pedidos/10/itens/5 Atualiza o item #5 do pedido #10`  
+`PATCH /pedidos/10/itens/5 Atualiza parcialmente o item #5 do pedido #10`  
+`DELETE /pedidos/10/itens/5 Apaga o item #5 do pedido #10`  
 
 
 
