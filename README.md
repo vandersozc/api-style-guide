@@ -6,7 +6,7 @@ Este documento tem por finalidade seguir o padrão de arquitetura da API RESTful
 
 ## Princípios de Design de serviços
 
-### Acoplamento:
+#### Acoplamento:
 Serviços e consumidores devem ser fracamente acoplados uns dos outros.
 
 Este princípio defende a concepção de contratos de serviço, com ênfase na redução das dependências entre o contrato de serviço, sua implementação e os consumidores de serviços.
@@ -79,6 +79,39 @@ Como a funcionalidade exposta é a mesma, o serviço deve ser projetado uma vez 
 * Os protocolos de contrato de serviço e acesso suportados devem atender às necessidades do consumidor;
 * A externalização de um serviço não deve exigir a reimplementação ou uma alteração no contrato de serviço;
 
+## Métodos HTTP
+///Tabela de métodos Http
+
+`GET:	Utilizado para recuperar um recurso.`
+`POST:	Utilizado para criar um recurso ou para executar uma operação complexa em um recurso.`
+`PUT:	Utilizado para atualizar um recurso.`
+`DELETE: Utilizado para excluir um recurso.`
+`PATCH:	Utilizado para executar uma atualização parcial em um recurso.`
+
+* O método GET não deve ter efeitos colaterais. não pode mudar o estado de um recurso;
+* O método POST deve ser usado para criar um novo recurso em uma coleção.
+Pode ser usado para criar um novo sub-recurso e estabelecer sua relação com o recurso principal;
+* O método POST pode ser usado em operações complexas, juntamente com o nome da operação, é considerado uma exceção ao    modelo RESTful. É mais aplicável em casos em que os recursos representam um processo de negócios e as operações são as etapas ou ações a serem executadas como parte dele;
+* O método PUT deve ser usado para atualizar atributos de recursos ou para estabelecer um relacionamento de um recurso 
+para um sub-recurso existente; atualiza o recurso principal com uma referência ao sub-recurso.
+* O método DELETE deve ser usado excluir um recurso existente
+* O método PATCH deve ser utilizado para atualizar parcialmente um recurso 
+
+Exemplos:
+`GET /pedidos Retorna a lista de pedidos`
+`GET /pedidos/10 Retorna um pedido específico`
+`POST /pedidos Cria um novo pedido`
+`PUT /pedidos/10 Atualiza o pedido #10`
+`PATCH /pedidos/10 Atualiza parcialmente o pedido #10`
+`DELETE /pedidos/10 Apaga o pedido #10`
+
+Exemplos com relacionamento:
+`GET /pedidos/10/itens Retorna a lista de itens do pedido #10`
+`GET /pedidos/10/itens/5 Retorna o item #5 do pedido #10`
+`POST /pedidos/10/itens Cria uma novo item no pedido #10`
+`PUT /pedidos/10/itens/5 Atualiza o item #5 do pedido #10`
+`PATCH /pedidos/10/itens/5 Atualiza parcialmente o item #5 do pedido #10`
+`DELETE /pedidos/10/itens/5 Apaga o item #5 do pedido #10`
 
 
 
@@ -86,7 +119,9 @@ Como a funcionalidade exposta é a mesma, o serviço deve ser projetado uma vez 
 
 
 
-## HATEOAS ###
+
+
+## HATEOAS
 O HATEOAS (Hypermedia as the Engine of Application State) é uma das propriedades do REST e  provê informações que permite navegar entre seus endpoints de forma dinâmica visto que inclui links junto às respostas.
 
 No contexto de APIs RESTful, um cliente poderia interagir com um serviço inteiramente por meio de hipermídia fornecida dinamicamente pelo serviço. Um serviço orientado por hipermídia fornece representação de recurso (s) para seus clientes para navegar dinamicamente na API, incluindo links hipermídia nas respostas.
