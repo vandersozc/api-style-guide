@@ -6,7 +6,7 @@ Este documento tem por finalidade seguir o padrão de arquitetura da API RESTful
 
 ## Princípios de Design de serviços
 
-### Acoplamento: 
+### Acoplamento:
 Serviços e consumidores devem ser fracamente acoplados uns dos outros.
 
 Este princípio defende a concepção de contratos de serviço, com ênfase na redução das dependências entre o contrato de serviço, sua implementação e os consumidores de serviços.
@@ -15,7 +15,7 @@ Este princípio defende a concepção de contratos de serviço, com ênfase na r
 * Um contrato de serviço pode evoluir sem impactar os consumidores existentes;
 * Um serviço em um domínio específico pode evoluir independentemente de outros domínios;
 
-`Encapsulamento`
+#### Encapsulamento
 Um serviço de domínio pode acessar dados e funcionalidades que não possui através de outros contratos de serviço.
 
 Este princípio defende que qualquer funcionalidade ou dados de que um serviço dependa e que não seja de sua propriedade  devem ser acessados apenas por meio de contratos de serviço.
@@ -23,7 +23,7 @@ Este princípio defende que qualquer funcionalidade ou dados de que um serviço 
 * Um serviço tem um claro limite de isolamento - um escopo claro de propriedade em termos de funcionalidade e dados;
 * Um serviço não pode expor os dados de que não é proprietário diretamente;
 
-`Estabilidade`
+#### Estabilidade
 Os contratos de serviço devem ser estáveis.
 
 Os serviços devem ser pensados de tal forma que o contrato que eles exponham permaneçam válidos para quem está utilizando. Caso o contrato de serviço evolua de forma incompatível para o consumidor, isso deve ser comunicado claramente.
@@ -32,7 +32,7 @@ Os serviços devem ser pensados de tal forma que o contrato que eles exponham pe
 * Funcionalidades adicionais devem ser introduzidas de forma a não impactar os consumidores existentes;
 * Políticas de descontinuação e migração devem ser claramente definidas para definir as expectativas dos consumidores;
 
-`Reutilizável`
+#### Reutilizável
 Os serviços devem ser desenvolvidos para serem reutilizáveis em vários contextos e por vários consumidores.
 
 Desenvolver serviços de forma que eles possam ser utilizados por múltiplos consumidores e em múltiplos contextos, alguns dos quais podem evoluir ao longo do tempo.
@@ -40,7 +40,7 @@ Desenvolver serviços de forma que eles possam ser utilizados por múltiplos con
 * Um contrato de serviço deve ser projetado não apenas para o contexto imediato, mas com suporte para ser utilizado por vários consumidores em diferentes contextos;
 * Um contrato de serviço pode precisar evoluir gradativamente para suportar vários contextos e consumidores ao longo do tempo;
 
-`Contrato baseado`
+#### Contrato baseado
 Funcionalidade e dados só devem ser expostos através de contratos de serviços padronizados.
 
 Todas as funcionalidades e dados devem ser expostos através de contratos de serviço padronizados, onde Padronizado significa 
@@ -49,7 +49,7 @@ que os contratos de serviço devem estar em conformidade com os padrões de proj
 * Funcionalidade e dados não podem ser compreendidos ou acessados ​​fora dos contratos de serviço;
 * Cada parte dos dados (como aqueles gerenciados em um armazenamento de dados) é de propriedade de apenas um serviço;
 
-`Consistência`
+#### Consistência
 Os serviços devem seguir um conjunto comum de regras, estilos de interação, vocabulário e tipos compartilhados.
 
 Esse princípio aumenta a facilidade de uso da plataforma de API, reduzindo a curva de aprendizado para consumidores de novos serviços.
@@ -58,7 +58,7 @@ Esse princípio aumenta a facilidade de uso da plataforma de API, reduzindo a cu
 * Um serviço deve usar o vocabulário de dicionários comuns e compartilhados
 * Estilos de interação compatíveis, granularidade de serviço e tipos compartilhados são essenciais para total interoperabilidade e facilidade de composições de serviço
 
-`Fácil de usar`
+#### Fácil de usar
 Os serviços devem ser fáceis de usar e compor nos consumidores (e aplicativos).
 
 Serviços podem ser combinados facilmente porque os contratos de serviço e os protocolos de acesso são consistentes, e cada contrato de serviço não precisa ser entendido de forma diferente.
@@ -69,7 +69,7 @@ mecanismos de identificação e autenticação, semântica de erros, uso de tipo
 * Um provedor do consumidor pode integrar, testar e implantar com facilidade um consumidor que usa esse serviço
 * Um provedor do consumidor pode monitorar facilmente os aspectos não funcionais de um serviço
 
-`Externalizável`
+#### Externalizável
 O serviço deve ser projetado de modo que a funcionalidade fornecida seja facilmente externalizável.
 
 Um serviço é desenvolvido para uso por consumidores que podem ser de outro domínio ou equipe, outra unidade de negócios ou outra empresa. Nesses casos a funcionalidade exposta é a mesma; 
