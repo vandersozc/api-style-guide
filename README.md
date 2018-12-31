@@ -1,4 +1,4 @@
-# api-style-guide
+# API Style Guide
 Padrões de criação de API's REST
 
 ## Introdução
@@ -128,8 +128,8 @@ Mapeamento de códgos de status:
 * Expressões em caminhos URI deve ser separado usando um hífen (-).
 * Expressões em seqüências de caracteres de consulta deve ser separado usando sublinhado (_).
 * Substantivos no Plural devem ser usados na URI, para identificar coleções de recursos de dados.
-`/clientes`
-`/enderecos`
+`/pedidos`
+`/itens`
 * Um recurso individual em uma coleção de recursos pode existir diretamente abaixo do URI de coleta.
 /clientes/{cliente_id}
 * Coleções de sub-recursos podem existir diretamente abaixo de um recurso individual. Isso deve transmitir um relacionamento com outra coleção de recursos (itens de pedido). `/pedidos/{pedido_id}/itens`
