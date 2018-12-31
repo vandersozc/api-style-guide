@@ -117,8 +117,8 @@ mensagem como a frase da razão . A frase deve ser uma mensagem legível e que t
 ![Tabela de alcance](https://github.com/vandersozc/api-style-guide/blob/master/images/alcance_http.png)
 
 Lista de códigos de status:
-
-///Tabela de códigos de status///
+![Tabela de alcance](https://github.com/vandersozc/api-style-guide/blob/master/images/codigo_http_1.png)
+![Tabela de alcance](https://github.com/vandersozc/api-style-guide/blob/master/images/codigo_http_2.png)
 
 Mapeamento de códgos de status:
 ///Tabela mapeamentos de códigos de status///
