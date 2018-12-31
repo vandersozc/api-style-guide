@@ -1,12 +1,12 @@
 # api-style-guide
 Padrões de criação de API's REST
 
-## Introdução ###
+## Introdução
 Este documento tem por finalidade seguir o padrão de arquitetura da API RESTful, e auxiliar desenvolvedores na criação de API's utilizando padrões, regras e convenções com o objetivo de manter a evolução dos serviços.
 
-## Princípios de Design de serviços ###
+## Princípios de Design de serviços
 
-`Acoplamento`
+### Acoplamento: 
 Serviços e consumidores devem ser fracamente acoplados uns dos outros.
 
 Este princípio defende a concepção de contratos de serviço, com ênfase na redução das dependências entre o contrato de serviço, sua implementação e os consumidores de serviços.
