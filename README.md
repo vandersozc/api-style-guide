@@ -81,14 +81,8 @@ Como a funcionalidade exposta é a mesma, o serviço deve ser projetado uma vez 
 
 ## Métodos HTTP
 <div style="display:flex;" >
-<img  src="screenshots/1.png" width="19%" >
+<img  src="Metodos_http.odt" width="19%" >
 </div>
-
-`GET:	Utilizado para recuperar um recurso.`
-`POST:	Utilizado para criar um recurso ou para executar uma operação complexa em um recurso.`
-`PUT:	Utilizado para atualizar um recurso.`
-`DELETE: Utilizado para excluir um recurso.`
-`PATCH:	Utilizado para executar uma atualização parcial em um recurso.`
 
 * O método GET não deve ter efeitos colaterais. não pode mudar o estado de um recurso;
 * O método POST deve ser usado para criar um novo recurso em uma coleção.
@@ -101,10 +95,15 @@ para um sub-recurso existente; atualiza o recurso principal com uma referência 
 
 Exemplos:
 `GET /pedidos Retorna a lista de pedidos`
+
 `GET /pedidos/10 Retorna um pedido específico`
+
 `POST /pedidos Cria um novo pedido`
+
 `PUT /pedidos/10 Atualiza o pedido #10`
+
 `PATCH /pedidos/10 Atualiza parcialmente o pedido #10`
+
 `DELETE /pedidos/10 Apaga o pedido #10`
 
 Exemplos com relacionamento:
