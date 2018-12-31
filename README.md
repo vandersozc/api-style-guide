@@ -10,6 +10,7 @@ No contexto de APIs RESTful, um cliente poderia interagir com um serviço inteir
 O cliente pode seguir o selflink de pedidos e descobrir todas as operações possíveis que ele pode executar no recurso do pedidos.
 
 Request: `POST https://api-int.grupodimedservices.com.br/tst/pedidos/v1/pedidos`
+
 Response:
 ```
 HTTP/1.1 201 CREATED
