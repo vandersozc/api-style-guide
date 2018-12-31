@@ -114,7 +114,7 @@ Serviços RESTful utilizam códigos de status HTTP para especificar os resultado
 O resultado de uma request utiliza um número inteiro e uma mensagem. O número é conhecido como o código de status e a 
 mensagem como a frase da razão . A frase deve ser uma mensagem legível e que todos possam entender de forma clara, usada para esclarecer o resultado da resposta. O protocolo HTTP categoriza códigos de status em intervalos.
 
-///Tabela de Alcance///
+![Tabela de alcance](https://github.com/vandersozc/api-style-guide/blob/master/images/alcance_http.jpg)
 
 Lista de códigos de status:
 
