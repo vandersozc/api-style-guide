@@ -81,7 +81,7 @@ Como a funcionalidade exposta é a mesma, o serviço deve ser projetado uma vez 
 
 ## Métodos HTTP
 <div style="display:flex;" >
-<img  src="images/metodos_http.odt" width="19%" >
+<img  src="images/metodos_http.png" width="19%" >
 </div>
 
 * O método GET não deve ter efeitos colaterais. não pode mudar o estado de um recurso;
