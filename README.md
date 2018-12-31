@@ -11,7 +11,7 @@ O cliente pode seguir o selflink de pedidos e descobrir todas as operações pos
 
 Request: `POST https://api-int.grupodimedservices.com.br/tst/pedidos/v1/pedidos`
 Response:
-´´´
+```
 HTTP/1.1 201 CREATED
 Content-Type: application/json
 {
@@ -39,7 +39,7 @@ Content-Type: application/json
 	    }
 	]
 }
-´´´
+```
 A API cria um novo pedido a partir da entrada e retorna os seguintes links para o cliente na response.
 
 Um link para recuperar a representação completa do pedido (também conhecido como selflink) (GET).
