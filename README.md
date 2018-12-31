@@ -80,9 +80,7 @@ Como a funcionalidade exposta é a mesma, o serviço deve ser projetado uma vez 
 * A externalização de um serviço não deve exigir a reimplementação ou uma alteração no contrato de serviço;
 
 ## Métodos HTTP
-<div style="display:flex;" >
-<img  src="images/metodos_http.png" width="19%" >
-</div>
+![Tabela de métodos](https://github.com/vandersozc/api-style-guide/blob/master/images/metodos_http.png)
 
 * O método GET não deve ter efeitos colaterais. não pode mudar o estado de um recurso;
 * O método POST deve ser usado para criar um novo recurso em uma coleção.
