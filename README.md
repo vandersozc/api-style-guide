@@ -109,7 +109,46 @@ Exemplos com relacionamento:
 `DELETE /pedidos/10/itens/5 Apaga o item #5 do pedido #10`  
 
 
+------------------ Códigos de Status HTTP -------------
+Serviços RESTful utilizam códigos de status HTTP para especificar os resultados da execução do método HTTP. 
+O resultado de uma request utiliza um número inteiro e uma mensagem. O número é conhecido como o código de status e a 
+mensagem como a frase da razão . A frase deve ser uma mensagem legível e que todos possam entender de forma clara, 
+usada para esclarecer o resultado da resposta. O protocolo HTTP categoriza códigos de status em intervalos.
 
+///Tabela de Alcance///
+
+Lista de códigos de status:
+
+///Tabela de códigos de status///
+
+Mapeamento de códgos de status:
+///Tabela mapeamentos de códigos de status///
+
+------------------ Convenções de Nomenclatura -------------
+- URIs devem começar com uma letra e usar apenas letras minúsculas.
+- Expressões em caminhos URI deve ser separado usando um hífen (-).
+- Expressões em seqüências de caracteres de consulta deve ser separado usando sublinhado (_).
+- Substantivos no Plural devem ser usados na URI, para identificar coleções de recursos de dados.
+/clientes
+/enderecos
+- Um recurso individual em uma coleção de recursos pode existir diretamente abaixo do URI de coleta.
+/clientes/{cliente_id}
+- Coleções de sub-recursos podem existir diretamente abaixo de um recurso individual. Isso deve transmitir um relacionamento com 
+outra coleção de recursos (itens de pedido).
+/pedidos/{pedido_id}/itens
+- Recursos individuais de sub-recursos podem existir, mas devem ser evitados em favor de recursos de nível superior.
+/pedidos/{pedido_id}/itens/{item_id}
+Melhor: /pedido-itens/{pedido_item_id}
+
+Nomes de recursos:
+- Substantivos devem ser usados, ao invés de utilizar verbos.
+- Os nomes dos recursos devem ser singulares para singletons e para coleções devem estar no plural.
+
+---------------- Caminho do recurso - URI
+Exemplo: https://api-int.grupodimedservices.com.br/tst/pedidos/v1/pedidos/10
+
+
+/// Tabela uri Caminho do recurso
 
 
 
