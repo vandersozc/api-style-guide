@@ -80,7 +80,9 @@ Como a funcionalidade exposta é a mesma, o serviço deve ser projetado uma vez 
 * A externalização de um serviço não deve exigir a reimplementação ou uma alteração no contrato de serviço;
 
 ## Métodos HTTP
-///Tabela de métodos Http
+<div style="display:flex;" >
+<img  src="screenshots/1.png" width="19%" >
+</div>
 
 `GET:	Utilizado para recuperar um recurso.`
 `POST:	Utilizado para criar um recurso ou para executar uma operação complexa em um recurso.`
