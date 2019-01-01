@@ -142,9 +142,8 @@ Melhor: `/pedido-itens/{pedido_item_id}`
 * Os nomes dos recursos devem ser singulares para singletons e para coleções devem estar no plural.
 
 #### Caminho do recurso - URI
-Exemplo: `https://api-int.grupodimedservices.com.br/tst/pedidos/v1/pedidos/10`
+Exemplo: `https://api-int.grupodimedservices.com.br/tst/pedido-service/v1/pedidos/10`
 ![Tabela de alcance](https://github.com/vandersozc/api-style-guide/blob/master/images/caminho_recurso.png)
-
 
 ## HATEOAS
 O HATEOAS (Hypermedia as the Engine of Application State) é uma das propriedades do REST e  provê informações que permite navegar entre seus endpoints de forma dinâmica visto que inclui links junto às respostas.
