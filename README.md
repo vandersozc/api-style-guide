@@ -145,6 +145,9 @@ Melhor: `/pedido-itens/{pedido_item_id}`
 Exemplo: `https://api-int.grupodimedservices.com.br/tst/pedido-service/v1/pedidos/10`
 ![Tabela de alcance](https://github.com/vandersozc/api-style-guide/blob/master/images/caminho_recurso.png)
 
+#### Caminho do sub-recurso - URI
+![Tabela de alcance](https://github.com/vandersozc/api-style-guide/blob/master/images/caminho_sub_recurso.png)
+
 ## HATEOAS
 O HATEOAS (Hypermedia as the Engine of Application State) é uma das propriedades do REST e  provê informações que permite navegar entre seus endpoints de forma dinâmica visto que inclui links junto às respostas.
 
