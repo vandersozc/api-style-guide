@@ -121,7 +121,7 @@ Lista de códigos de status:
 ![Tabela de alcance](https://github.com/vandersozc/api-style-guide/blob/master/images/codigo_http_2.png)
 
 Mapeamento de códgos de status:
-///Tabela mapeamentos de códigos de status///
+![Tabela de alcance](https://github.com/vandersozc/api-style-guide/blob/master/images/mapeamento_http.png)
 
 ## Convenções de Nomenclatura
 * URIs devem começar com uma letra e usar apenas letras minúsculas.
