@@ -128,42 +128,17 @@ mensagem como a frase da razão . A frase deve ser uma mensagem legível e que t
 | 5xx     | Erro do servidor: O servidor não pode executar o método devido a um defeito na aplicação. Os códigos de status da faixa 5xx não devem ser utilizados para validação ou tratamento de erros lógicos. |
 
 #### Lista de códigos de status:
-|      Código do Status      |                                                                                                                                                          Descrição                                                                                                                                                          |
-|:--------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 200 OK                     | Execução bem sucedida.                                                                                                                                                                                                                                                                                                      |
-| 201 Created                | Execução do método para indicar a criação bem-sucedida de um recurso(POST). Se o recurso já foi criado (por uma execução anterior do mesmo método por exemplo), o servidor deve retornar o código de status 200 OK.                                                                                                         |
-| 202 Accepted               | Usado para uma execução de método assíncrono para especificar que o servidor aceitou a solicitação e a executará posteriormente.                                                                                                                                                                                            |
-| 204 No Content             | O servidor executou com sucesso o método, mas não há nenhum corpo de entidade para retornar.                                                                                                                                                                                                                                |
-| 400 Bad Request            | A solicitação não pode ser entendida pelo servidor. Use este código de status para especificar: - Os dados como parte da carga útil não podem ser convertidos no tipo de dados subjacente; - Os dados não estão no formato esperado; - Campo obrigatório não está disponível; - Tipo de erro de validação de dados simples; |
-| 401 Unauthorized           | A solicitação requer autenticação e nenhuma foi fornecida.                                                                                                                                                                                                                                                                  |
-| 403 Forbidden              | O cliente não está autorizado a acessar o recuso, embora possa ter credenciais válidas. A API pode usar este código caso a autorização no nível de negócios falhe.                                                                                                                                                          |
-| 404 Not Found              | O servidor não encontrou nada que corrensponda ao URI da solicitação. Isso siginifica que o URI está incorreto ou o recurso não está disponível.                                                                                                                                                                            |
-| 405 Method Not Allowed     | O servidor não implementou o método HTTP solicitado. Normalmente, esse é o comportamento padrão para estruturas de API.                                                                                                                                                                                                     |
-| 406 Not Acceptable         | O servidor deve retornar esse código de status quando ele não pode retornar a carga útil da resposta usando o tipo de mídia solicitado pelo cliente. Por exemplo, se o cliente enviar um Accept-application/xml no cabeçalho e a API só puder gerar application/json.                                                       |
-| 415 Unsupported Media Type | O servidor deve retornar esse código de status quando o tipo de mídia da carga útil da solicitação não puder ser processado. Por exemplo, se o cliente envia um Content-Type application/xml no cabeçalho, mas a API só pode aceitar application/json.                                                                      |
-| 422 Unprocessable Entity   | A ação solicitada não pode ser executada e pode exigir interação com APIs ou processos fora da solicitação atual. Isso é diferente de uma responsta 500, pois não há problemas sistêmicos que limitem a API ao executar a solicitação.                                                                                      |
-| 429 Too Many Requests      | O servidor deve retornar esse código de status se o limite de taxa para o usuário, o aplicativo ou o token exceder um valor predefinido.                                                                                                                                                                                    |
-| 500 Internal Server Error  | É um erro de sistema e geralmente indica que, embora o cliente tenha parecido fornecer uma solicitação correta , algo inesperado deu errado no servidor. Uma resposta 500 indica um defeito de software do lado do servidor. 500 não deve ser utilizado para validação de clientes ou tratamento de erros lógicos.          |
-| 503 Service Unavaliable    | O servidor não pode manipular a solicitação de um serviço devido a uma manutenção temporária;                                                                                                                                                                                                                               |
+![Tabela de alcance](https://github.com/vandersozc/api-style-guide/blob/master/images/codigo_http_1.png)
+![Tabela de alcance](https://github.com/vandersozc/api-style-guide/blob/master/images/codigo_http_2.png)
 
 #### Mapeamento de códgos de status:
-| Código do Status | 200 OK | 201 Created | 202 Accepted | 204 No Content | 400 Bad Request | 404 Not Found | 422 Unprocessable Entity | 500 Internal Server Error |
-|:----------------:|:------:|:-----------:|:------------:|:--------------:|:---------------:|:-------------:|:------------------------:|:-------------------------:|
-| GET              |    x   |             |              |                |        x        |       x       |             x            |             x             |
-| POST             |    x   |      x      |       x      |                |        x        |       x       |             x            |             x             |
-| PUT              |    x   |             |       x      |        x       |        x        |       x       |             x            |             x             |
-| PATCH            |    x   |             |              |        x       |        x        |       x       |                          |             x             |
-| DELETE           |    x   |             |              |        x       |        x        |       x       |             x            |             x             |
+![Tabela de alcance](https://github.com/vandersozc/api-style-guide/blob/master/images/mapeamento_http.png)
 
 ## Convenções de Nomenclatura
 * URIs devem começar com uma letra e usar apenas letras minúsculas.
-* Expressões em caminhos URI deve ser separado usando um hífen (-).
-* Expressões em seqüências de caracteres de consulta deve ser separado usando sublinhado (_).
-* Substantivos no Plural devem ser usados na URI, para identificar coleções de recursos de dados.
-`/pedidos`
-`/itens`
-* Um recurso individual em uma coleção de recursos pode existir diretamente abaixo do URI de coleta.
-/clientes/{cliente_id}
+* Expressões em caminhos URI deve ser separado usando um hífen (-). `/pedido-itens`
+* Expressões em seqüências de caracteres de consulta deve ser separado usando sublinhado (_). `/clientes/{cliente_id}`
+* Um recurso individual em uma coleção de recursos pode existir diretamente abaixo do URI de coleta. `/clientes/{cliente_id}`
 * Coleções de sub-recursos podem existir diretamente abaixo de um recurso individual. Isso deve transmitir um relacionamento com outra coleção de recursos (itens de pedido). `/pedidos/{pedido_id}/itens`
 * Recursos individuais de sub-recursos podem existir, mas devem ser evitados em favor de recursos de nível superior.
 `/pedidos/{pedido_id}/itens/{item_id}`
@@ -196,7 +171,7 @@ HTTP/1.1 201 CREATED
 Content-Type: application/json
 {
 	"id": "10",
-	"numero": "2",
+	"cliente": "João",
 	"links": [
 	    {
 	        "href": "https://api-int.grupodimedservices.com.br/tst/pedidos/v1/pedidos",
