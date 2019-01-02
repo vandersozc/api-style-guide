@@ -175,6 +175,7 @@ Melhor: `/pedido-itens/{pedido_item_id}`
 
 #### Caminho do recurso - URI
 Exemplo: `https://api-int.grupodimedservices.com.br/tst/pedido-service/v1/pedidos/10`
+
 | Parte do Caminho | Descrição               | Definição                                                                                                                                                                                                       |
 |:----------------:|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | /v2              | Versão principal da API | A versão principal da API é usada para distinguir entre duas versões incompatíveis com versões anteriores da mesma API.                                                                                         |
