@@ -120,7 +120,12 @@ Serviços RESTful utilizam códigos de status HTTP para especificar os resultado
 O resultado de uma request utiliza um número inteiro e uma mensagem. O número é conhecido como o código de status e a 
 mensagem como a frase da razão . A frase deve ser uma mensagem legível e que todos possam entender de forma clara, usada para esclarecer o resultado da resposta. O protocolo HTTP categoriza códigos de status em intervalos.
 
-![Tabela de alcance](https://github.com/vandersozc/api-style-guide/blob/master/images/alcance_http.png)
+## Tabela de alcance
+| Alcance |                                                                                             Significado                                                                                             |
+|:-------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 2xx     | Execução bem sucedida. Uma execução de método pode ser bem sucedida de várias formas. Este código de status especifica o caminho que ele conseguiu.                                                 |
+| 4xx     | Geralmente são problemas com a solicitação. Na maioria dos casos o cliente pode modificar sua solicitação e reenviá-la.                                                                             |
+| 5xx     | Erro do servidor: O servidor não pode executar o método devido a um defeito na aplicação. Os códigos de status da faixa 5xx não devem ser utilizados para validação ou tratamento de erros lógicos. |
 
 #### Lista de códigos de status:
 ![Tabela de alcance](https://github.com/vandersozc/api-style-guide/blob/master/images/codigo_http_1.png)
