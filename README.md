@@ -80,7 +80,13 @@ Como a funcionalidade exposta é a mesma, o serviço deve ser projetado uma vez 
 * A externalização de um serviço não deve exigir a reimplementação ou uma alteração no contrato de serviço;
 
 ## Métodos HTTP
-![Tabela de métodos](https://github.com/vandersozc/api-style-guide/blob/master/images/metodos_http.png)
+| **Métdo Http** |                                       **Descrição**                                      |
+|:----------:|:------------------------------------------------------------------------------------:|
+| GET        | Utlizado para recuperar um recurso                                                   |
+| POST       | Utilizado para criar um recurso ou para executar uma operação complexa em um recurso |
+| PUT        | Utilizado para atualizar um recurso                                                  |
+| DELETE     | Utilizado para excluir um recurso                                                    |
+| PATCH      | Utilizado para executar uma atualização parcial em um recurso                        |
 
 * O método GET não deve ter efeitos colaterais. não pode mudar o estado de um recurso;
 * O método POST deve ser usado para criar um novo recurso em uma coleção.
