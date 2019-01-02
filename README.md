@@ -177,8 +177,7 @@ Exemplo: `https://api-int.grupodimedservices.com.br/tst/pedido-service/v1/pedido
 | **/v1**              | Versão principal da API | A versão principal da API é usada para distinguir entre duas versões incompatíveis com versões anteriores da mesma API.                                                                                         |
 | **/pedido-service**  | Nome do serviço               | O nome do serviço é usado para fornecer um contexto e um escopo para recursos.|
 | **/pedidos**         | Nome do recurso         | Representa o tipo de recurso a ser acessado nas operações.
-	     |
-| **/10**              | ID do recurso           | Para recuperar um recurso específico da coleção, um ID de recurso deve ser especificado como parte do URI.                                                                                                      |
+| **/10**              | ID do recurso           | Para recuperar um recurso específico da coleção, um ID de recurso deve ser especificado como parte do URI.|
 
 #### Caminho do sub-recurso - URI
 
