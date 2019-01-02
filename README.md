@@ -183,8 +183,11 @@ Exemplo: `https://api-int.grupodimedservices.com.br/tst/pedido-service/v1/pedido
 | /pedidos         | Nome do recurso         | Se o nome do recurso representar uma coleção de recursos, o método GET no recurso deverá recuperar a lista de recursos.                                                                                         |
 | /10              | ID do recurso           | Para recuperar um recurso específico da coleção, um ID de recurso deve ser especificado como parte do URI.                                                                                                      |
 
-#### Caminho do sub-recurso - URI
-![Tabela de alcance](https://github.com/vandersozc/api-style-guide/blob/master/images/caminho_sub_recurso.png)
+#### Caminho do sub-recurso - URI|                                        Exemplo                                        | Descrição                                                                                                                                                                                                                                                                  |
+|:-------------------------------------------------------------------------------------:|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| GET http://api-int.grupodimedservices.com.br/tst/pedido-service/v1/pedidos/10/itens   | Essa chamada deve retornar todos os itens de um pedido.                                                                                                                                                                                                                    |
+| GET http://api-int.grupodimedservices.com.br/tst/pedido-service/v1/pedidos/10/itens/2 | Essa chamada deve retornar apenas os detalhes de um item específico associado a um pedido. Na prática, duas invocações de passo devem ser evitadas. Se o segundo identificador for único, o recurso de nível superior (por exemplo /pedido-service/v1/itens/2 é preferido) |
+
 
 ## HATEOAS
 O HATEOAS (Hypermedia as the Engine of Application State) é uma das propriedades do REST e  provê informações que permite navegar entre seus endpoints de forma dinâmica visto que inclui links junto às respostas.
