@@ -147,7 +147,13 @@ mensagem como a frase da razão . A frase deve ser uma mensagem legível e que t
 | 503 Service Unavaliable    | O servidor não pode manipular a solicitação de um serviço devido a uma manutenção temporária;                                                                                                                                                                                                                               |
 
 #### Mapeamento de códgos de status:
-![Tabela de alcance](https://github.com/vandersozc/api-style-guide/blob/master/images/mapeamento_http.png)
+| Código do Status | 200 OK | 201 Created | 202 Accepted | 204 No Content | 400 Bad Request | 404 Not Found | 422 Unprocessable Entity | 500 Internal Server Error |
+|:----------------:|:------:|:-----------:|:------------:|:--------------:|:---------------:|:-------------:|:------------------------:|:-------------------------:|
+| GET              |    x   |             |              |                |        x        |       x       |             x            |             x             |
+| POST             |    x   |      x      |       x      |                |        x        |       x       |             x            |             x             |
+| PUT              |    x   |             |       x      |        x       |        x        |       x       |             x            |             x             |
+| PATCH            |    x   |             |              |        x       |        x        |       x       |                          |             x             |
+| DELETE           |    x   |             |              |        x       |        x        |       x       |             x            |             x             |
 
 ## Convenções de Nomenclatura
 * URIs devem começar com uma letra e usar apenas letras minúsculas.
