@@ -164,7 +164,7 @@ HTTP/1.1 201 CREATED
 Content-Type: application/json
 {
 	"id": "10",
-	"nome": "Pedro",
+	"numero": "1",
 	"links": [
 	    {
 	        "href": "https://api-int.grupodimedservices.com.br/tst/pedidos/v1/pedidos",
