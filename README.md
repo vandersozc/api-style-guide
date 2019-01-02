@@ -175,7 +175,12 @@ Melhor: `/pedido-itens/{pedido_item_id}`
 
 #### Caminho do recurso - URI
 Exemplo: `https://api-int.grupodimedservices.com.br/tst/pedido-service/v1/pedidos/10`
-![Tabela de alcance](https://github.com/vandersozc/api-style-guide/blob/master/images/caminho_recurso.png)
+| Parte do Caminho | Descrição               | Definição                                                                                                                                                                                                       |
+|:----------------:|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| /v2              | Versão principal da API | A versão principal da API é usada para distinguir entre duas versões incompatíveis com versões anteriores da mesma API.                                                                                         |
+| /pedido-service  | Namespace               | Os indicadores de namespace são usados para fornecer um contexto e um escopo para recursos. Eles são determinados por limites lógicos no modelo de capacidade de negócios implementando pela plataforma de API. |
+| /pedidos         | Nome do recurso         | Se o nome do recurso representar uma coleção de recursos, o método GET no recurso deverá recuperar a lista de recursos.                                                                                         |
+| /10              | ID do recurso           | Para recuperar um recurso específico da coleção, um ID de recurso deve ser especificado como parte do URI.                                                                                                      |
 
 #### Caminho do sub-recurso - URI
 ![Tabela de alcance](https://github.com/vandersozc/api-style-guide/blob/master/images/caminho_sub_recurso.png)
