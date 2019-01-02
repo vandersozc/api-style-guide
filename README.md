@@ -138,11 +138,11 @@ mensagem como a frase da razão . A frase deve ser uma mensagem legível e que t
 * URIs devem começar com uma letra e usar apenas letras minúsculas.
 * Expressões em caminhos URI deve ser separado usando um hífen (-). `/pedido-itens`
 * Expressões em seqüências de caracteres de consulta deve ser separado usando sublinhado (_). `/clientes/{cliente_id}`
-* Um recurso individual em uma coleção de recursos pode existir diretamente abaixo do URI de coleta. `/clientes/{cliente_id}`
-* Coleções de sub-recursos podem existir diretamente abaixo de um recurso individual. Isso deve transmitir um relacionamento com outra coleção de recursos (itens de pedido). `/pedidos/{pedido_id}/itens`
+* Um recurso individual em uma coleção de recursos pode existir após a URI de coleta. `/clientes/{cliente_id}`
+* Coleções de sub-recursos podem existir após um recurso individual. Isso deve transmitir um relacionamento com outra coleção de recursos (itens de pedido). `/pedidos/{pedido_id}/itens`
 * Recursos individuais de sub-recursos podem existir, mas devem ser evitados em favor de recursos de nível superior.
 `/pedidos/{pedido_id}/itens/{item_id}`
-Melhor: `/pedido-itens/{pedido_item_id}`
+Melhor: `/pedido-itens/{pedido_id}`
 
 #### Nomes de recursos
 * Substantivos devem ser usados, ao invés de utilizar verbos.
