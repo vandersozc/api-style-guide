@@ -81,7 +81,7 @@ Como a funcionalidade exposta é a mesma, o serviço deve ser projetado uma vez 
 
 ## Métodos HTTP
 | **Métdo Http** |                                       **Descrição**                                      |
-|:----------:|:------------------------------------------------------------------------------------:|
+|:----------:|:------------------------------------------------------------------------------------|
 | GET        | Utlizado para recuperar um recurso                                                   |
 | POST       | Utilizado para criar um recurso ou para executar uma operação complexa em um recurso |
 | PUT        | Utilizado para atualizar um recurso                                                  |
