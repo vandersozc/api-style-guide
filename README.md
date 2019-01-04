@@ -155,6 +155,20 @@ mensagem como a frase da razão . A frase deve ser uma mensagem legível e que t
 | **PATCH**            |    x   |             |              |        x       |        x        |       x       |                          |             x             |
 | **DELETE**           |    x   |             |              |        x       |        x        |       x       |             x            |             x             |
 
+* `GET`: O propósito do método `GET` é recuperar um recurso. No caso de sucesso, um código de status `200` e uma resposta com o conteúdo do recurso são esperados. Nos casos onde uma coleção de recursos está vazia, o status `200` também é apropriado (haverá uma lista vazia na resposta). Se um item de recurso for excluído (soft deleted) nos dados subjacentes, o status `404` é adequado.
+
+* `POST`: O propósito primário do `POST` é criar um recurso. Se o recurso não existir e for criado como parte da execução, então o status `201` deve ser retornado.
+	* É esperado que em uma execução de sucesso, uma referência ao recurso criado (em formado de link ou ID) seja retornada no corpo de resposta.
+	* Caso a criação do recurso dependa da existência de outro sub-recurso que não exista, o status `404` pode ser retornado.
+
+* `PUT`: Este método deve retornar o código de status `204` e não há necessidade de retornar nenhum conteúdo na maioria dos casos onde a requisição foi feita para atualizar um recurso e ele foi atualizado com sucesso. As informações de requisição não devem ecoar de volta.
+	* Em casos raros onde houver necessidade de retorno de dados na resposta, o código de status `200` deve ser utilizado.
+	
+* `PATCH`: Este método deve seguir as mesmas semânticas do método `PUT`, status `204` e nenhum corpo de resposta.
+
+* `DELETE`: Este método deve retornar o status `204` e não há necessidade de corpo de resposta caso o recurso tenha sido deletado com sucesso.
+	* `DELETE` deve continuar retornando status `204` mesmo se o recurso em questão já tenha sido deletado, pois retornar `404` neste método pode levar o consumidor a acreditar erroneamente que o recurso nunca existiu. O correto seria utilizar um `GET` para garantir que o recurso em questão realmente existe antes de executar um `DELETE`.
+
 ## Convenções de Nomenclatura
 * URIs devem começar com uma letra e usar apenas letras minúsculas.
 * Expressões em caminhos URI deve ser separado usando um hífen (-). `/pedido-itens`
