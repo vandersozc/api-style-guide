@@ -247,3 +247,6 @@ Um link para recuperar a representação completa do pedido (também conhecido c
 Um link para atualizar o pedido (PUT).
 Um link para atualizar parcialmente o pedido (PATCH).
 Um link para excluir o pedido (DELETE).
+
+## Exceptions
+
