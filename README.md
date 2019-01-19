@@ -222,7 +222,7 @@ O cliente pode seguir o selflink de pedidos e descobrir todas as operações pos
 Request: `POST https://api-int.grupodimedservices.com.br/tst/pedidos/v1/pedidos`
 
 Response:
-```
+```json
 HTTP/1.1 201 CREATED
 Content-Type: application/json
 {
