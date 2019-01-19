@@ -1,6 +1,16 @@
 # API Style Guide
 Padrões de criação de API's REST
 
+<p align="left">&bull;
+	<a href="#introdução">Introdução</a> <br/>&bull;
+    	<a href="#princípios-de-design-de-serviços">Princípios de Design de Serviços</a> <br/>&bull;
+	<a href="#métodos-http">Métodos HTTP</a> <br/>&bull;
+	<a href="#códigos-de-status-http">Códigos de Status HTTP</a> <br/>&bull;
+	<a href="#convenções-de-nomenclatura">Convenções de Nomeclatura</a> <br/>&bull;
+	<a href="#hateoas">Hateoas</a> <br/>&bull;
+	<a href="#exceptions">Exceptions</a> <br/>
+</p>
+
 ## Introdução
 Este documento tem por finalidade seguir o padrão de arquitetura da API RESTful, e auxiliar desenvolvedores na criação de API's utilizando padrões, regras e convenções com o objetivo de manter a evolução dos serviços.
 
@@ -120,7 +130,7 @@ Serviços RESTful utilizam códigos de status HTTP para especificar os resultado
 O resultado de uma request utiliza um número inteiro e uma mensagem. O número é conhecido como o código de status e a 
 mensagem como a frase da razão . A frase deve ser uma mensagem legível e que todos possam entender de forma clara, usada para esclarecer o resultado da resposta. O protocolo HTTP categoriza códigos de status em intervalos.
 
-## Tabela de alcance
+### Tabela de alcance
 | **Alcance** |                                                                                             **Significado**                                                                                             |
 |:-------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **2xx**     | Execução bem sucedida. Uma execução de método pode ser bem sucedida de várias formas. Este código de status especifica o caminho que ele conseguiu.                                                 |
