@@ -1,6 +1,7 @@
 # API Style Guide
 Padrões de criação de API's REST
 
+------
 <p align="left">&bull;
 	<a href="#introdução">Introdução</a> <br/>&bull;
     	<a href="#princípios-de-design-de-serviços">Princípios de Design de Serviços</a> <br/>&bull;
