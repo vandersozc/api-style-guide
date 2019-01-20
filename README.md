@@ -261,3 +261,34 @@ Um link para excluir o pedido (DELETE).
 
 ## Exceptions
 
+
+#### Exemplo Exception 
+```json
+{
+    "namespace": "/app-bff/v1/message",
+    "language": "pt-BR",
+    "errors": [
+        {
+            "namespace": "/app-bff/v1/message",
+            "name": "INTERNAL_SERVER_ERROR",
+            "message": "Ocorreu um erro inesperado na aplicação",
+            "httpStatusCodes": [
+                "INTERNAL_SERVER_ERROR"
+            ],
+            "issues": [
+                {
+                    "id": "UNKNOWN_ISSUE",
+                    "issue": "JSON decoding error: Cannot deserialize value of type `br.com.dimed.appbff.microservicesintegration.covenant.coverage.model.output.FeePayerEnum` from String \"CONVENIO\": value not one of declared Enum instance names: [COVENANT, AFFILIATED, FREE]; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `br.com.dimed.appbff.microservicesintegration.covenant.coverage.model.output.FeePayerEnum` from String \"CONVENIO\": value not one of declared Enum instance names: [COVENANT, AFFILIATED, FREE]\n at [Source: UNKNOWN; line: -1, column: -1] (through reference chain: br.com.dimed.appbff.microservicesintegration.covenant.coverage.model.output.CovenantCoverageOutput[\"pagaTaxa\"])"
+                }
+            ],
+            "suggestedApplicationActions": [
+                "Entre em contato com o nosso suporte através do e-mail desenvservices@dimed.com.br"
+            ],
+            "suggestedUserActions": [
+                "Por favor, caso o problema persista entre em contato com o nosso suporte"
+            ]
+        }
+    ]
+}
+```
+
