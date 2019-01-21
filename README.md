@@ -262,7 +262,7 @@ Um link para excluir o pedido (DELETE).
 ## Exceptions
 Conforme especificações HTTP, o resultado de uma requisição pode ser especificado usando um número e uma mensagem. O número é conhecido como o código de status e a mensagem como a frase de razão . A frase da razão é uma mensagem legível para humanos, usada para esclarecer o resultado da resposta. Os códigos de status HTTP no intervalo 4xx indicam erros do lado do cliente (erros de validação ou lógica), erros no intervalo 5xx indicam erros do lado do servidor (geralmente defeito ou interrupção).
 	
-### Estrututa do Erro
+### Estrutura do Erro
 Estrutura do Json contendo o erro:
 
 **namespace:** Namespace da API;
