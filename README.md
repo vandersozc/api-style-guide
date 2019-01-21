@@ -274,7 +274,7 @@ Estrutura do Json contendo o erro:
 
 **message:** Uma mensagem legível, descrevendo o erro. Esta mensagem deve ser uma descrição do problema e nao uma sugestão sobre como corrigí-lo.
 
-**httpStatusCodes:** Códigos de status HTTP aplicáveis para esse erro.
+**httpStatusCodes:** Códigos de status HTTP aplicáveis para esse erro. Ex: (400, 401, 403, 404, 405, 406, 415, 422, 429, 500, 503)
 
 **issues:** Problemas associados a esse erro.
 
@@ -297,7 +297,7 @@ Estrutura do Json contendo o erro:
             "name": "INTERNAL_SERVER_ERROR",
             "message": "Ocorreu um erro inesperado na aplicação",
             "httpStatusCodes": [
-                500, 503, 400, 401, 403, 404
+                500
             ],
             "issues": [
                 {
