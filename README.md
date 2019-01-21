@@ -297,7 +297,7 @@ Estrutura do Json contendo o erro:
             "name": "INTERNAL_SERVER_ERROR",
             "message": "Ocorreu um erro inesperado na aplicação",
             "httpStatusCodes": [
-                "INTERNAL_SERVER_ERROR"
+                500, 503, 400, 401, 403, 404
             ],
             "issues": [
                 {
