@@ -260,9 +260,33 @@ Um link para atualizar parcialmente o pedido (PATCH).
 Um link para excluir o pedido (DELETE).
 
 ## Exceptions
+	Conforme especificações HTTP, o resultado de uma requisição pode ser especificado usando um número e uma mensagem. O número é conhecido como o código de status e a mensagem como a frase de razão . A frase da razão é uma mensagem legível para humanos, usada para esclarecer o resultado da resposta. Os códigos de status HTTP no intervalo 4xx indicam erros do lado do cliente (erros de validação ou lógica), erros no intervalo 5xx indicam erros do lado do servidor (geralmente defeito ou interrupção).
+	
+### Estrututa do Erro
+Estrutura do Json contendo o erro:
 
+**namespace:** Namespace da API;
+**language:** linguagem usada para catalogar os erros. O padrão é português do Brasil. Este valor deve ser uma tag de idioma BCP-47 tipo pr-BR.
 
-#### Exemplo Exception 
+**errors:** um ou mais itens do catálogo de erros.
+
+**name:** Um nome único legível para o erro. Este valor deve ser o valor definido error.
+
+**message:** Uma mensagem legível, descrevendo o erro. Esta mensagem deve ser uma descrição do problema e nao uma sugestão sobre como corrigí-lo.
+
+**httpStatusCodes:** Códigos de status HTTP aplicáveis para esse erro.
+
+**issues:** Problemas associados a esse erro.
+
+**id:** Identificador único de catálogo do problema.
+
+**issue:** Razão para este erro. A cadeia de problemas pode ter variáveis. Utilize uma string parametrizada seguindo a sintaxe Java String.
+
+**suggestedApplicationActions:** Sugira ações práticas que o desenvolvedor que consome a API possa tomar para resolver o erro.
+
+**suggestedUserActions:** Sugira ações práticas que um usuário que consome a API possa tomar para resolver o erro.
+
+### Exemplo padrão de Exception 
 ```json
 {
     "namespace": "/app-bff/v1/message",
