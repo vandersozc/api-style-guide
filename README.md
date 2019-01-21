@@ -268,7 +268,7 @@ Estrutura do Json contendo o erro:
 **namespace:** Namespace da API;
 **language:** linguagem usada para catalogar os erros. O padrão é português do Brasil. Este valor deve ser uma tag de idioma BCP-47 tipo pr-BR.
 
-**errors:** um ou mais itens do catálogo de erros.
+**errors:** Um ou mais itens do catálogo de erros.
 
 **name:** Um nome único legível para o erro. Este valor deve ser o valor definido error.
 
